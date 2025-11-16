@@ -1,9 +1,6 @@
 from enum import Enum
 import gymnasium as gym
 from random import choice
-import pygame
-
-pygame.init()
 
 class Action(Enum):
     NOTHING = 0
@@ -24,39 +21,28 @@ while not episode_over:
     angular_vel = observation[5]
 
     # action_id = choice(actions)
-    if linear_vel[1] < -0.4 and abs(angular) < 1:
+    if linear_vel[1] < -0.1 and abs(angular) < 1:
         action_id = Action.MAIN_ENGINE.value
         print("MAIN ENGINE")
-    elif angular > 0.2:
+    elif angular > 0.1:
         action_id = Action.RIGHT_ENGINE.value
         print("RIGHT ENGINE")
-    elif angular < -0.2:
+    elif angular < -0.1:
         action_id = Action.LEFT_ENGINE.value
         print("LEFT ENGINE")
-    elif linear[0] < -0.1:
+    elif linear[0] < -0.2:
         action_id = Action.RIGHT_ENGINE.value
         print("RIGHT ENGINE")
-    elif linear[0] > 0.1:
-        action_id = Action.LEFT_ENGINE.value
-        print("LEFT ENGINE")
-    elif linear_vel[0] < -0.1:
-        action_id = Action.RIGHT_ENGINE.value
-        print("RIGHT ENGINE")
-    elif linear_vel[0] > 0.1:
+    elif linear[0] > 0.2:
         action_id = Action.LEFT_ENGINE.value
         print("LEFT ENGINE")
     else:
         action_id = Action.NOTHING.value
         print("NOTHING")
-    print(total_reward)
-
+    print("\n")
     observation, reward, terminated, truncated, info = env.step(action_id)
     total_reward += float(reward)
     episode_over = terminated or truncated
-
-    keys = pygame.key.get_pressed()
-    if keys[pygame.K_SPACE]:
-        break
 
 env.close()
 print("Total Reward:", total_reward)
