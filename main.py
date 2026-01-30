@@ -21,7 +21,7 @@ while not episode_over:
     angular_vel = observation[5]
 
     # action_id = choice(actions)
-    if linear_vel[1] < -0.1 and abs(angular) < 1:
+    if linear_vel[1] < -0.2 and abs(angular) < 1:
         action_id = Action.MAIN_ENGINE.value
         print("MAIN ENGINE")
     elif angular > 0.1:
