@@ -4,7 +4,9 @@ This repository contains two different approaches to solving the Gymnasium Lunar
 
 ## Demonstration
 
-<video src="./example.webm" width="600" controls autoplay loop></video>
+<video src="https://github.com/rrocketmann/gym-lunar-lander/raw/main/example.webm" width="600" controls autoplay loop></video>
+
+If the video doesn't play in your browser, you can [download/view it here](https://github.com/rrocketmann/gym-lunar-lander/raw/main/example.webm).
 
 ## 1. Machine Learning Model (DQN)
 
