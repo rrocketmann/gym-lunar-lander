@@ -2,6 +2,10 @@
 
 This repository contains two different approaches to solving the Gymnasium Lunar Lander environment: a simple rule-based algorithm and a Machine Learning (Reinforcement Learning) model.
 
+## Demonstration
+
+<video src="./example.webm" width="600" controls autoplay loop></video>
+
 ## 1. Machine Learning Model (DQN)
 
 The ML implementation uses a Deep Q-Network (`DQN`) algorithm written with PyTorch. 
