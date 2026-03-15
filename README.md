@@ -1,4 +1,4 @@
-# Lunar Lander AI Controller
+# Gymnasium Lunar Lander DQN
 
 This repository contains two different approaches to solving the Gymnasium Lunar Lander environment: a simple rule-based algorithm and a Machine Learning (Reinforcement Learning) model.
 
