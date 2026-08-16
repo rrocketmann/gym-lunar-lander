@@ -6,7 +6,7 @@ This repository contains two different approaches to solving the Gymnasium Lunar
 ![](https://github.com/rrocketmann/gym-lunar-lander/blob/main/landing.gif)
 ## 1. Machine Learning Model (DQN)
 
-The ML implementation uses a Deep Q-Network (`DQN`) algorithm written with PyTorch. 
+The ML implementation uses a Q-Network algorithm. 
 
 ### Usage:
 - **Train the Model (Headless):** 
@@ -14,12 +14,6 @@ The ML implementation uses a Deep Q-Network (`DQN`) algorithm written with PyTor
   python main.py
   ```
   This trains the model over 1000 fast episodes and saves the progress to `lunar_lander_model.pth`.
-
-- **Watch the Trained Model (Visual):**
-  ```bash
-  python main.py play
-  ```
-  This will open a render window and let the built-in trained agent attempt to land the craft based on its network weights.
 
 ---
 
