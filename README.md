@@ -1,28 +1,38 @@
-# Gymnasium Lunar Lander DQN
+# Gymnasium Lunar Lander
 
-This repository contains two different approaches to solving the Gymnasium Lunar Lander environment: a simple rule-based algorithm and a Machine Learning (Reinforcement Learning) model.
+This repository contains two approaches for `LunarLander-v3` in Gymnasium:
 
-## Demonstration
-![](https://github.com/rrocketmann/gym-lunar-lander/blob/main/landing.gif)
-## 1. Machine Learning Model (DQN)
+- A tabular RL agent in [lander.py](lander.py)
+- A simple rule-based controller in [rule_lander.py](rule_lander.py)
 
-The ML implementation uses a Q-Network algorithm. 
+## Setup
 
-### Usage:
-- **Train the Model (Headless):** 
-  ```bash
-  python main.py
-  ```
-  This trains the model over 1000 fast episodes and saves the progress to `lunar_lander_model.pth`.
+Install dependencies:
 
----
+```bash
+pip install -r requirements.txt
+```
 
-## 2. Rule-Based Algorithm (If-Statement Logic)
+## 1. Tabular RL Agent
 
-This was the initial approach containing hand-tuned conditions (`if/elif/else`) that manually monitor position, velocity, and tilt to guide the module.
+The RL implementation in [lander.py](lander.py) trains in a headless environment for speed, then runs evaluation and visible rollout episodes.
 
-### Usage:
-- **Watch the Rule-Based Control:**
-  ```bash
-  python rule_based.py
-  ```
+Run with defaults:
+
+```bash
+python lander.py
+```
+
+Default behavior:
+
+- Trains for `10000` episodes
+- Prints test metrics over `1000` episodes
+- Opens a visual window for `3` rollout episodes (`render_mode="human"`)
+
+## 2. Rule-Based Controller
+
+Run the hand-written policy with human rendering:
+
+```bash
+python rule_lander.py
+```

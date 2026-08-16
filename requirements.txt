@@ -1,0 +1,4 @@
+gymnasium[box2d]>=1.0.0
+matplotlib>=3.8.0
+numpy>=1.26.0
+tqdm>=4.66.0

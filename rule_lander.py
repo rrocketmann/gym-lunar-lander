@@ -11,7 +11,6 @@ class Action(Enum):
 total_reward = 0.0
 env = gym.make("LunarLander-v3", render_mode="human")
 observation, info = env.reset()
-# actions = [0, 1, 2, 3]
 
 episode_over = False
 while not episode_over:
@@ -20,7 +19,6 @@ while not episode_over:
     angular = observation[4]
     angular_vel = observation[5]
 
-    # action_id = choice(actions)
     if linear_vel[1] < -0.2 and abs(angular) < 1:
         action_id = Action.MAIN_ENGINE.value
         print("MAIN ENGINE")
