@@ -65,7 +65,7 @@ class LunarLanderAgent:
         )
 
 learning_rate = 0.01
-n_episodes = 100
+n_episodes = 10000
 start_epsilon = 1.0
 epsilon_decay = start_epsilon / (n_episodes / 2)
 final_epsilon = 0.1
